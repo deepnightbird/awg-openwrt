@@ -49,11 +49,11 @@ jobs:
     needs: generate-config
     strategy:
       matrix:
-        tag: ${{ 24.10.0-rc2 }}
-        pkgarch: ${{ aarch64_cortex-a53 }}
-        target: ${{ mediatek }}
-        subtarget: ${{ filogic }}
-        vermagic: ${{ 56564de2705a53e5f6456d5babec92a2-r1 }}
+        tag: ${{ "24.10.0-rc2" }}
+        pkgarch: ${{ "aarch64_cortex-a53" }}
+        target: ${{ "mediatek" }}
+        subtarget: ${{ "filogic" }}
+        vermagic: ${{ "56564de2705a53e5f6456d5babec92a2-r1" }}
         build_env: ${{ fromJson(needs.generate-config.outputs.job-config) }}
       fail-fast: false
 
